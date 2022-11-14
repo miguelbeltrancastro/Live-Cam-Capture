@@ -6,6 +6,8 @@ from datetime import datetime
 import os
 import filecmp
 
+URL = input("Please enter a string: ")
+
 #Create new folder
 path = "Capture "+ str(datetime.today().year) + str(datetime.today().month) +str(datetime.today().day)
 try:
@@ -15,8 +17,6 @@ except OSError:
     exit()
 else:
     print ("Successfully created the directory %s " % path)
-
-URL = input("Please enter a string: ")
 
 #Capture first image
 contador =0
