@@ -22,20 +22,20 @@ URL = "https://www.skilift-donnstetten.de/webcam/pic/webpic.jpg"
 contador =0
 filename = os.path.join(path, "Imagen" + str(contador) + ".jpg")
 urllib.request.urlretrieve(URL, filename)
-print("Imágenes guardadas: " + str(contador+1))
+print("Saved Images: " + str(contador+1))
 contador=contador+1
 time.sleep(60)
 
 #Capture one image every 60 seconds
 while True:
-    filename = os.path.join(path, "Imagen" + str(contador) + ".jpg")
+    filename = os.path.join(path, "Image" + str(contador) + ".jpg")
     urllib.request.urlretrieve(URL, filename)
     #If previously captured image is the same, then it is deleted
-    if filecmp.cmp(filename, os.path.join(path, "Imagen" + str(contador-1) + ".jpg"), shallow=False):
-        print("Imagen duplicada")
+    if filecmp.cmp(filename, os.path.join(path, "Image" + str(contador-1) + ".jpg"), shallow=False):
+        print("Duplicated image")
         os.remove(filename)
         time.sleep(60)
     else:
-        print("Imágenes guardadas: " + str(contador+1))
+        print("Saved Images: " + str(contador+1))
         contador=contador+1
         time.sleep(60)
