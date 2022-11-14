@@ -16,11 +16,11 @@ except OSError:
 else:
     print ("Successfully created the directory %s " % path)
 
-URL = "https://www.skilift-donnstetten.de/webcam/pic/webpic.jpg"
+URL = input("Please enter a string: ")
 
 #Capture first image
 contador =0
-filename = os.path.join(path, "Imagen" + str(contador) + ".jpg")
+filename = os.path.join(path, "Image" + str(contador) + ".jpg")
 urllib.request.urlretrieve(URL, filename)
 print("Saved Images: " + str(contador+1))
 contador=contador+1
