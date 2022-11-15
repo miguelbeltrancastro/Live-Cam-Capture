@@ -6,10 +6,10 @@ from datetime import datetime
 import os
 import filecmp
 
-URL = input("Please enter a string: ")
+URL = input("Please enter the URL: ")
 
 #Create new folder
-path = "Capture "+ str(datetime.today().year) + str(datetime.today().month) +str(datetime.today().day)
+path = "Capture-"+ str(datetime.today().year) + str(datetime.today().month) +str(datetime.today().day)
 try:
     os.mkdir(path)
 except OSError:
