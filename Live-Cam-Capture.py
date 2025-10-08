@@ -9,7 +9,7 @@ import filecmp
 URL = input("Please enter the URL: ")
 
 #Create new folder
-path = "Capture-"+ str(datetime.today().year) + str(datetime.today().month) +str(datetime.today().day)
+path = "Capture-"+ str(datetime.today().year) + str(datetime.today().month) +str(datetime.today().day)+str(datetime.today().hour) + str(datetime.today().minute)
 try:
     os.mkdir(path)
 except OSError:
